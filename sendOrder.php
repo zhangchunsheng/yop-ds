@@ -51,7 +51,7 @@ function order(){
     $request->addParam("requestDate", $_REQUEST['requestDate']);
     $request->addParam("redirectUrl", $_REQUEST['redirectUrl']);
     $request->addParam("notifyUrl", $_REQUEST['notifyUrl']);
-    $request->addParam("goodsParamExt", $_REQUEST['goodsParamExt']);
+    $request->addParam("goodsParamExt", html_entity_decode($_REQUEST['goodsParamExt']));
     $request->addParam("paymentParamExt", $_REQUEST['paymentParamExt']);
     $request->addParam("industryParamExt", $_REQUEST['industryParamExt']);
     $request->addParam("memo", $_REQUEST['memo']);
